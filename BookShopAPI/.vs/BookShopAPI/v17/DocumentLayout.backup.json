@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Github\\BookShop-API\\BookShopAPI\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\controllers\\admin\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:controllers\\admin\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 52,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,45 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Interfaces\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Services\\Admin\\AuthService\\Interfaces\\IAuthService.cs",
-              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Interfaces\\IAuthService.cs",
-              "RelativeToolTip": "Services\\Admin\\AuthService\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T07:25:07.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Implements\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\Admin\\AuthService\\Implements\\AuthService.cs",
-              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Implements\\AuthService.cs",
-              "RelativeToolTip": "Services\\Admin\\AuthService\\Implements\\AuthService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwOsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T07:17:44.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Controllers\\Admin\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Admin\\AuthController.cs",
-              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Controllers\\Admin\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\Admin\\AuthController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAQwEIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T07:17:39.961Z",
-              "EditorCaption": ""
             }
           ]
         }
