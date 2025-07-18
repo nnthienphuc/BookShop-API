@@ -2,6 +2,7 @@
 using BookShopAPI.Middlewares;
 using BookShopAPI.Services.Admin.AuthService.Implements;
 using BookShopAPI.Services.Admin.AuthService.Interfaces;
+using BookShopAPI.Services.Admin.CategoryService.Interfaces;
 using BookShopAPI.Services.EmailService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -85,6 +86,8 @@ builder.Services.AddScoped<ExceptionMiddleware>();
 builder.Services.AddScoped<EmailSenderService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 // Helpers
 builder.Services.AddHttpContextAccessor();
