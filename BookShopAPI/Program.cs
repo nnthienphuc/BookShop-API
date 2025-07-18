@@ -81,6 +81,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 // Services & DI
+builder.Services.AddScoped<ExceptionMiddleware>();
 builder.Services.AddScoped<EmailSenderService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();

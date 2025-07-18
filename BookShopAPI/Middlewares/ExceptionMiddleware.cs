@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Net;
+using System.Text.Json;
 
 namespace BookShopAPI.Middlewares
 {
@@ -6,22 +7,24 @@ namespace BookShopAPI.Middlewares
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<ExceptionMiddleware> _logger;
+        private readonly IWebHostEnvironment _env;
 
-        public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
+        public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger, IWebHostEnvironment env)
         {
             _next = next;
             _logger = logger;
+            _env = env;
         }
 
         public async Task InvokeAsync(HttpContext context)
         {
             try
             {
-                await _next(context); // Chạy qua middleware tiếp theo (hoặc controller)
+                await _next(context);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Unhandled exception: {ex.Message}");
+                _logger.LogError(ex, ex.Message);
                 await HandleExceptionAsync(context, ex);
             }
         }
@@ -29,39 +32,49 @@ namespace BookShopAPI.Middlewares
         private Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
             int statusCode;
-            string message;
+            string errorType;
+            string message = exception.Message;
 
             switch (exception)
             {
                 case KeyNotFoundException:
-                    statusCode = StatusCodes.Status404NotFound;
-                    message = exception.Message;
+                    statusCode = (int)HttpStatusCode.NotFound;
+                    errorType = "NotFound";
                     break;
 
                 case ArgumentException:
-                    statusCode = StatusCodes.Status400BadRequest;
-                    message = exception.Message;
+                    statusCode = (int)HttpStatusCode.BadRequest;
+                    errorType = "ValidationError";
                     break;
 
                 case InvalidOperationException:
-                    statusCode = StatusCodes.Status409Conflict;
-                    message = exception.Message;
+                    statusCode = (int)HttpStatusCode.Conflict;
+                    errorType = "Conflict";
+                    break;
+
+                case UnauthorizedAccessException:
+                    statusCode = (int)HttpStatusCode.Unauthorized;
+                    errorType = "Unauthorized";
                     break;
 
                 default:
-                    statusCode = StatusCodes.Status500InternalServerError;
-                    message = "An unexpected error occurred.";
+                    statusCode = (int)HttpStatusCode.InternalServerError;
+                    errorType = "ServerError";
+                    message = _env.IsDevelopment() ? exception.Message : "Something went wrong.";
                     break;
             }
 
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = statusCode;
 
-            return context.Response.WriteAsync(JsonSerializer.Serialize(new
+            var response = new
             {
                 statusCode,
+                errorType,
                 message
-            }));
+            };
+
+            return context.Response.WriteAsync(JsonSerializer.Serialize(response));
         }
     }
 }

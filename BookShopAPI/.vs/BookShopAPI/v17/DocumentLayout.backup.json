@@ -3,16 +3,72 @@
   "WorkspaceRootPath": "D:\\Github\\BookShop-API\\BookShopAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\controllers\\admin\\hold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:controllers\\admin\\hold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\common\\controller\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:common\\controller\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\controllers\\admin\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:controllers\\admin\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\common\\helper\\currentuserhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:common\\helper\\currentuserhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\implements\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\implements\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\interfaces\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\interfaces\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\dtos\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\dtos\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\dtos\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\dtos\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\emailservice\\emailsenderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\emailservice\\emailsenderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\data\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:data\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\bookshopapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -26,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 52,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +102,202 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "Middlewares\\ExceptionMiddleware.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "Middlewares\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAgwDAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T06:19:00.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EmailSenderService.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\EmailService\\EmailSenderService.cs",
+              "RelativeDocumentMoniker": "Services\\EmailService\\EmailSenderService.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\EmailService\\EmailSenderService.cs",
+              "RelativeToolTip": "Services\\EmailService\\EmailSenderService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T06:17:48.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Staff.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Data\\Models\\Staff.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\Staff.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Data\\Models\\Staff.cs",
+              "RelativeToolTip": "Data\\Models\\Staff.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAUwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T06:17:43.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CurrentUserHelper.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Helper\\CurrentUserHelper.cs",
+              "RelativeDocumentMoniker": "Common\\Helper\\CurrentUserHelper.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Helper\\CurrentUserHelper.cs",
+              "RelativeToolTip": "Common\\Helper\\CurrentUserHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T06:11:50.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Controller\\BaseController.cs",
+              "RelativeDocumentMoniker": "Common\\Controller\\BaseController.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Controller\\BaseController.cs",
+              "RelativeToolTip": "Common\\Controller\\BaseController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T06:10:14.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-18T06:08:11.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ResetPasswordDTO.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\DTOs\\ResetPasswordDTO.cs",
+              "RelativeDocumentMoniker": "Services\\Admin\\AuthService\\DTOs\\ResetPasswordDTO.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\DTOs\\ResetPasswordDTO.cs",
+              "RelativeToolTip": "Services\\Admin\\AuthService\\DTOs\\ResetPasswordDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T05:15:18.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ChangePasswordDTO.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\DTOs\\ChangePasswordDTO.cs",
+              "RelativeDocumentMoniker": "Services\\Admin\\AuthService\\DTOs\\ChangePasswordDTO.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\DTOs\\ChangePasswordDTO.cs",
+              "RelativeToolTip": "Services\\Admin\\AuthService\\DTOs\\ChangePasswordDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T05:15:08.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\DTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "Services\\Admin\\AuthService\\DTOs\\LoginDTO.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\DTOs\\LoginDTO.cs",
+              "RelativeToolTip": "Services\\Admin\\AuthService\\DTOs\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T05:14:59.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\DTOs\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "Services\\Admin\\AuthService\\DTOs\\RegisterDTO.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\DTOs\\RegisterDTO.cs",
+              "RelativeToolTip": "Services\\Admin\\AuthService\\DTOs\\RegisterDTO.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAowCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T05:14:52.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Implements\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\Admin\\AuthService\\Implements\\AuthService.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Implements\\AuthService.cs",
+              "RelativeToolTip": "Services\\Admin\\AuthService\\Implements\\AuthService.cs",
+              "ViewState": "AgIAAB0BAAAAAAAAAAAAwDQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T05:11:56.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Implements\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "Services\\Admin\\AuthService\\Implements\\AuthRepository.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Implements\\AuthRepository.cs",
+              "RelativeToolTip": "Services\\Admin\\AuthService\\Implements\\AuthRepository.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAmwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T05:11:47.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Services\\Admin\\AuthService\\Interfaces\\IAuthService.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Services\\Admin\\AuthService\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T05:11:39.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IAuthRepository.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Interfaces\\IAuthRepository.cs",
+              "RelativeDocumentMoniker": "Services\\Admin\\AuthService\\Interfaces\\IAuthRepository.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Interfaces\\IAuthRepository.cs",
+              "RelativeToolTip": "Services\\Admin\\AuthService\\Interfaces\\IAuthRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T05:11:32.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Controllers\\Admin\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Admin\\AuthController.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Controllers\\Admin\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\Admin\\AuthController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAApwDsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T05:09:39.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -59,19 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "hold.cs",
-              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Controllers\\Admin\\hold.cs",
-              "RelativeDocumentMoniker": "Controllers\\Admin\\hold.cs",
-              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Controllers\\Admin\\hold.cs",
-              "RelativeToolTip": "Controllers\\Admin\\hold.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T09:49:35.765Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 17,
               "Title": "BookShopAPI.csproj",
               "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\BookShopAPI.csproj",
               "RelativeDocumentMoniker": "BookShopAPI.csproj",
@@ -83,15 +322,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAApwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T09:46:22.912Z"
+              "WhenOpened": "2025-07-11T09:46:22.912Z",
+              "EditorCaption": ""
             }
           ]
         }

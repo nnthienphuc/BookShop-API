@@ -19,70 +19,35 @@ namespace BookShopAPI.Controllers.Admin
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDTO registerDTO)
         {
-            var success = await _authService.RegisterAsync(registerDTO);
-
-            if (!success)
-                return BadRequest("Registration failed. Please check your information.");
-
-            return Ok("Registration successful. Please check your email to activate your account.");
+            await _authService.RegisterAsync(registerDTO);
+            return Ok(new { message = "Registration successful. Please check your email to activate your account." });
         }
 
         [HttpGet("activate")]
         public async Task<IActionResult> ActivateAccount([FromQuery] string token)
         {
-            var success = await _authService.ActivateAccountAsync(token);
-
-            if (!success)
-                return BadRequest("Activation failed. Please check your token.");
-
-            return Ok("Account activated successfully.");
+            await _authService.ActivateAccountAsync(token);
+            return Ok(new { message = "Account activated successfully." });
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDTO loginDTO)
         {
-            try
-            {
-                var token = await _authService.LoginAsync(loginDTO);
+            var token = await _authService.LoginAsync(loginDTO);
+            return Ok(new { token });
+        }
 
-                return Ok(new { token });
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Unauthorized(new { message = ex.Message });
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ResetPasswordDTO resetPasswordDTO)
+        {
+            await _authService.ResetPasswordAsync(resetPasswordDTO);
+            return Ok(new { message = "Reset password email sent successfully." });
         }
 
         [HttpPost("reset-password")]
-        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDTO resetPasswordDTO)
-        {
-            try
-            {
-                await _authService.ResetPasswordAsync(resetPasswordDTO);
-                return Ok(new { message = "Reset password email sent successfully." });
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Unauthorized(new { message = ex.Message });
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
-        }
-
-        [HttpGet("reset-password")]
         public async Task<IActionResult> ResetPassword([FromQuery] string token)
         {
-            var success = await _authService.ResetPasswordFromTokenAsync(token);
-
-            if (!success)
-                return BadRequest(new { message = "Token is invalid or expried." });
-
+            await _authService.ResetPasswordFromTokenAsync(token);
             return Ok(new { message = "Password reset successfully. Your new password is: '123456'" });
         }
 
@@ -90,30 +55,13 @@ namespace BookShopAPI.Controllers.Admin
         [Authorize]
         public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDTO changePasswordDTO)
         {
-            try
-            {
-                var staffIdClaim = User.FindFirst("staffId");
+            var staffIdClaim = User.FindFirst("staffId");
+            if (staffIdClaim == null)
+                throw new UnauthorizedAccessException("Invalid token.");
 
-                if (staffIdClaim == null)
-                    return Unauthorized(new { message = "Invalid token." });
-
-                var staffId = Guid.Parse(staffIdClaim.Value);
-
-                var success = await _authService.ChangePasswordAsync(staffId, changePasswordDTO);
-
-                if (!success)
-                    return BadRequest(new { message = "Change password failed. Please check your information." });
-
-                return Ok(new { message = "Password changed successfully." });
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Unauthorized(new { message = ex.Message });
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var staffId = Guid.Parse(staffIdClaim.Value);
+            await _authService.ChangePasswordAsync(staffId, changePasswordDTO);
+            return Ok(new { message = "Password changed successfully." });
         }
     }
 }
