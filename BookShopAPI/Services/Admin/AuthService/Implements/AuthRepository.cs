@@ -10,14 +10,14 @@ namespace BookShopAPI.Services.Admin.AuthService.Implements
     {
         private readonly ApplicationDbContext _context;
 
-        public AuthRepository (ApplicationDbContext context)
+        public AuthRepository(ApplicationDbContext context)
         {
-            context = _context;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task AddAsync(Staff staff)
+        public async Task AddAsync (Staff staff)
         {
-            return await _context.Staffs.AddAsync(staff);
+            await _context.Staffs.AddAsync(staff);
         }
 
         public async Task<Staff?> GetByIdAsync (Guid id)

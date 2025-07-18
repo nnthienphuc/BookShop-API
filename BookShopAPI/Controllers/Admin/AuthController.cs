@@ -45,11 +45,12 @@ namespace BookShopAPI.Controllers.Admin
         }
 
         [HttpPost("reset-password")]
-        public async Task<IActionResult> ResetPassword([FromQuery] string token)
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordConfirmDTO dto)
         {
-            await _authService.ResetPasswordFromTokenAsync(token);
-            return Ok(new { message = "Password reset successfully. Your new password is: '123456'" });
+            await _authService.ResetPasswordFromTokenAsync(dto);
+            return Ok(new { message = "Password reset successfully." });
         }
+
 
         [HttpPut("change-password")]
         [Authorize]

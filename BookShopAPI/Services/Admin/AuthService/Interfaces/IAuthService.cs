@@ -8,7 +8,7 @@ namespace BookShopAPI.Services.Admin.AuthService.Interfaces
         Task<string> LoginAsync(LoginDTO loginDTO);
         Task ActivateAccountAsync(string token);
         Task ResetPasswordAsync(ResetPasswordDTO resetPasswordDTO);
-        Task ResetPasswordFromTokenAsync(string token);
+        Task ResetPasswordFromTokenAsync(ResetPasswordConfirmDTO dto);
         Task ChangePasswordAsync(Guid staffId, ChangePasswordDTO changePasswordDTO);
     }
 }

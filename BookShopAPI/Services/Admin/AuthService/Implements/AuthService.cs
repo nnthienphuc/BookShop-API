@@ -116,18 +116,25 @@ namespace BookShopAPI.Services.Admin.AuthService.Implements
                 $"Click to reset: <a href='{link}'>Reset Password</a>");
         }
 
-        public async Task ResetPasswordFromTokenAsync(string token)
+        public async Task ResetPasswordFromTokenAsync(ResetPasswordConfirmDTO dto)
         {
-            var principal = GetPrincipalFromToken(token);
+            var principal = GetPrincipalFromToken(dto.Token);
             var staffId = GetStaffIdFromClaims(principal);
             var staff = await _repo.GetByIdAsync(staffId) ?? throw new KeyNotFoundException("Staff not found.");
 
             if (staff.IsDeleted)
                 throw new UnauthorizedAccessException("Your account has been deleted.");
 
-            staff.HashPassword = BCrypt.Net.BCrypt.HashPassword("123456");
+            if (!staff.IsActived)
+                throw new UnauthorizedAccessException("Your account is not activated.");
+
+            if (dto.NewPassword != dto.ConfirmNewPassword)
+                throw new ArgumentException("New password and confirm password do not match.");
+
+            staff.HashPassword = BCrypt.Net.BCrypt.HashPassword(dto.NewPassword);
             await _repo.SaveChangesAsync();
         }
+
 
         public async Task ChangePasswordAsync(Guid staffId, ChangePasswordDTO dto)
         {
