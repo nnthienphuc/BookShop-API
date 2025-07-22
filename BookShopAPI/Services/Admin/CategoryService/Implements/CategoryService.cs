@@ -105,7 +105,28 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
                 throw new KeyNotFoundException($"Category with id '{id}' is not found.");
 
             var existingName = await _repo.GetByNameAsync(name);
-            if (existingName.Id != id)
+            if (existingName != null && existingName.Id != id)
+                throw new InvalidOperationException($"Category with name '{name}' is existing.");
+
+            existingCategory.Name = dto.Name;
+            existingCategory.IsDeleted = dto.IsDeleted;
+            _repo.Update(existingCategory);
+
+            return await _repo.SaveChangesAsync();
+        }
+
+        public async Task<bool> DeleteAsync(Guid id)
+        {
+            var existingCategory = await _repo.GetByIdAsync(id);
+            if (existingCategory == null)
+                throw new KeyNotFoundException($"Category with id '{id}' is not found.");
+
+            if (existingCategory.IsDeleted == true)
+                throw new InvalidOperationException($"Category with id '{id}' has been deleted.");
+
+            _repo.Delete(existingCategory);
+
+            return await _repo.SaveChangesAsync();
         }
     }
 }
