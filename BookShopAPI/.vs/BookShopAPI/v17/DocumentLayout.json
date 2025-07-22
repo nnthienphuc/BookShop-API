@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:common\\helper\\audithelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\categoryservice\\implements\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\categoryservice\\implements\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\common\\enum\\auditaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:common\\enum\\auditaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\data\\models\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:data\\models\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\common\\helper\\currentuserhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:common\\helper\\currentuserhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\common\\enum\\auditaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:common\\enum\\auditaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\categoryservice\\implements\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\categoryservice\\implements\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\controllers\\admin\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,86 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 52,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 10,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuditLog.cs",
-              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Data\\Models\\AuditLog.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\AuditLog.cs",
-              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Data\\Models\\AuditLog.cs",
-              "RelativeToolTip": "Data\\Models\\AuditLog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T09:50:22.761Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T09:49:36.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CurrentUserHelper.cs",
-              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Helper\\CurrentUserHelper.cs",
-              "RelativeDocumentMoniker": "Common\\Helper\\CurrentUserHelper.cs",
-              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Helper\\CurrentUserHelper.cs",
-              "RelativeToolTip": "Common\\Helper\\CurrentUserHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T09:47:33.172Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuditHelper.cs",
-              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Helper\\AuditHelper.cs",
-              "RelativeDocumentMoniker": "Common\\Helper\\AuditHelper.cs",
-              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Helper\\AuditHelper.cs",
-              "RelativeToolTip": "Common\\Helper\\AuditHelper.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAIwBkAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T09:46:30.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuditAction.cs",
-              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Enum\\AuditAction.cs",
-              "RelativeDocumentMoniker": "Common\\Enum\\AuditAction.cs",
-              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Enum\\AuditAction.cs",
-              "RelativeToolTip": "Common\\Enum\\AuditAction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T09:46:26.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ICategoryService.cs",
-              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\CategoryService\\Interfaces\\ICategoryService.cs",
-              "RelativeDocumentMoniker": "Services\\Admin\\CategoryService\\Interfaces\\ICategoryService.cs",
-              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\CategoryService\\Interfaces\\ICategoryService.cs",
-              "RelativeToolTip": "Services\\Admin\\CategoryService\\Interfaces\\ICategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T09:32:18.14Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -140,15 +62,89 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuditLog.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Data\\Models\\AuditLog.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\AuditLog.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Data\\Models\\AuditLog.cs",
+              "RelativeToolTip": "Data\\Models\\AuditLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:50:22.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:49:36.576Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "CurrentUserHelper.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Helper\\CurrentUserHelper.cs",
+              "RelativeDocumentMoniker": "Common\\Helper\\CurrentUserHelper.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Helper\\CurrentUserHelper.cs",
+              "RelativeToolTip": "Common\\Helper\\CurrentUserHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:47:33.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\CategoryService\\Interfaces\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "Services\\Admin\\CategoryService\\Interfaces\\ICategoryService.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\CategoryService\\Interfaces\\ICategoryService.cs",
+              "RelativeToolTip": "Services\\Admin\\CategoryService\\Interfaces\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:32:18.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuditAction.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Enum\\AuditAction.cs",
+              "RelativeDocumentMoniker": "Common\\Enum\\AuditAction.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Enum\\AuditAction.cs",
+              "RelativeToolTip": "Common\\Enum\\AuditAction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:46:26.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\CategoryService\\Implements\\CategoryService.cs",
               "RelativeDocumentMoniker": "Services\\Admin\\CategoryService\\Implements\\CategoryService.cs",
               "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\CategoryService\\Implements\\CategoryService.cs",
               "RelativeToolTip": "Services\\Admin\\CategoryService\\Implements\\CategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK0AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAA4wK0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T09:32:24.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuditHelper.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Helper\\AuditHelper.cs",
+              "RelativeDocumentMoniker": "Common\\Helper\\AuditHelper.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Common\\Helper\\AuditHelper.cs",
+              "RelativeToolTip": "Common\\Helper\\AuditHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:46:30.139Z",
               "EditorCaption": ""
             },
             {
@@ -161,8 +157,7 @@
               "RelativeToolTip": "Controllers\\Admin\\CategoriesController.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAuwCgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T08:08:45.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T08:08:45.209Z"
             }
           ]
         }
