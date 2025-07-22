@@ -1,17 +1,25 @@
-﻿using BookShopAPI.Models;
+﻿using BookShopAPI.Common.Enum;
+using BookShopAPI.Common.Helper;
+using BookShopAPI.Data;
+using BookShopAPI.Models;
 using BookShopAPI.Services.Admin.CategoryService.DTOs;
 using BookShopAPI.Services.Admin.CategoryService.Interfaces;
 using System.Runtime.CompilerServices;
+using System.Security.Claims;
 
 namespace BookShopAPI.Services.Admin.CategoryService.Implements
 {
     public class CategoryService : ICategoryService
     {
         private readonly ICategoryRepository _repo;
+        private readonly ApplicationDbContext _context;
+        private readonly IHttpContextAccessor _httpContext;
 
-        public CategoryService (ICategoryRepository repo)
+        public CategoryService (ICategoryRepository repo, ApplicationDbContext context, IHttpContextAccessor httpContext)
         {
             _repo = repo ?? throw new ArgumentNullException(nameof(repo));
+            _context = context;
+            _httpContext = httpContext;
         }
 
         public async Task<IEnumerable<CategoryResponseDTO>> GetAllAsync()
@@ -86,12 +94,27 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
 
             var category = new Category
             {
-                Name = dto.Name
+                Name = dto.Name,
+                IsDeleted = dto.IsDeleted
             };
 
             await _repo.AddAsync(category);
 
-            return await _repo.SaveChangesAsync();
+            var result = await _repo.SaveChangesAsync();
+
+            if (result)
+            {
+                await AuditHelper.LogAuditAsync(
+                    _httpContext,
+                    _context,
+                    AuditAction.ADD,
+                    "Category",
+                    category.Id,
+                    $"Created category '{category.Name}'"
+                );
+            }
+
+            return result;
         }
 
         public async Task<bool> UpdateAsync(Guid id, CategoryRequestDTO dto)
@@ -112,7 +135,21 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
             existingCategory.IsDeleted = dto.IsDeleted;
             _repo.Update(existingCategory);
 
-            return await _repo.SaveChangesAsync();
+            var result = await _repo.SaveChangesAsync();
+
+            if (result)
+            {
+                await AuditHelper.LogAuditAsync(
+                    _httpContext,
+                    _context,
+                    AuditAction.UPDATE,
+                    "Category",
+                    id,
+                    $"Updated category '{existingCategory.Name}' to '{dto.Name}', IsDeleted = {dto.IsDeleted}"
+                );
+            }
+
+            return result;
         }
 
         public async Task<bool> DeleteAsync(Guid id)
@@ -126,7 +163,21 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
 
             _repo.Delete(existingCategory);
 
-            return await _repo.SaveChangesAsync();
+            var result = await _repo.SaveChangesAsync();
+
+            if (result)
+            {
+                await AuditHelper.LogAuditAsync(
+                    _httpContext,
+                    _context,
+                    AuditAction.DELETE,
+                    "Category",
+                    id,
+                    $"Soft deleted category '{existingCategory.Name}'"
+                );
+            }
+
+            return result;
         }
     }
 }
