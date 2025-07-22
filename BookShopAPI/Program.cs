@@ -1,5 +1,6 @@
 ﻿using BookShopAPI.Data;
 using BookShopAPI.Middlewares;
+using BookShopAPI.Services.Admin.AuditLogService;
 using BookShopAPI.Services.Admin.AuthService.Implements;
 using BookShopAPI.Services.Admin.AuthService.Interfaces;
 using BookShopAPI.Services.Admin.CategoryService.Interfaces;
@@ -84,6 +85,8 @@ builder.Services.AddSwaggerGen(c =>
 // Services & DI
 builder.Services.AddScoped<ExceptionMiddleware>();
 builder.Services.AddScoped<EmailSenderService>();
+builder.Services.AddScoped<AuditLogService>();
+builder.Services.AddHttpContextAccessor(); // để inject được IHttpContextAccessor
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();

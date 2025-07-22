@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BookShopAPI.Data.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace BookShopAPI.Models;
 
@@ -51,4 +52,8 @@ public partial class Staff
 
     [InverseProperty("Staff")]
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+
+    [InverseProperty("Staff")]
+    public virtual ICollection<AuditLog> AuditLogs { get; set; } = new List<AuditLog>();
+
 }

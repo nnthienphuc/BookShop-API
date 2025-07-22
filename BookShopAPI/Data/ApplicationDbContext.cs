@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using BookShopAPI.Data.Models;
 using BookShopAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 
 namespace BookShopAPI.Data;
 
@@ -15,6 +16,8 @@ public partial class ApplicationDbContext : DbContext
         : base(options)
     {
     }
+
+    public virtual DbSet<AuditLog> AuditLogs { get; set; }
 
     public virtual DbSet<Author> Authors { get; set; }
 
@@ -40,6 +43,26 @@ public partial class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<AuditLog>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_AuditLog");
+
+            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
+            entity.Property(e => e.Timestamp).HasDefaultValueSql("(sysdatetime())");
+
+            entity.Property(e => e.Action).HasMaxLength(50);
+            entity.Property(e => e.EntityName).HasMaxLength(100);
+            entity.Property(e => e.Description).IsRequired();
+            entity.Property(e => e.IPAddress).HasMaxLength(45);
+            entity.Property(e => e.UserAgent).HasMaxLength(200);
+
+            entity.HasOne(d => d.Staff)
+                .WithMany(p => p.AuditLogs)
+                .HasForeignKey(d => d.StaffId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_AuditLogs_Staffs");
+        });
+
         modelBuilder.Entity<Author>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_Author");
