@@ -66,8 +66,7 @@
               "RelativeToolTip": "Services\\Admin\\AuthService\\Interfaces\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T03:59:46.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T03:59:46.487Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "Services\\Admin\\AuthService\\Implements\\AuthRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T03:59:32.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T03:59:32.677Z"
             },
             {
               "$type": "Document",
@@ -92,8 +90,7 @@
               "RelativeToolTip": "Services\\Admin\\AuthService\\Implements\\AuthService.cs",
               "ViewState": "AgIAAKkAAAAAAAAAAAAnwMoAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T03:19:11.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T03:19:11.094Z"
             },
             {
               "$type": "Document",
@@ -103,7 +100,7 @@
               "RelativeDocumentMoniker": "Controllers\\Admin\\AuthController.cs",
               "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Controllers\\Admin\\AuthController.cs",
               "RelativeToolTip": "Controllers\\Admin\\AuthController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAowCoAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAADkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-23T03:09:56.747Z",
               "EditorCaption": ""
@@ -142,8 +139,7 @@
               "RelativeToolTip": "Services\\Customer\\CustomerService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T03:05:50.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T03:05:50.584Z"
             }
           ]
         }
