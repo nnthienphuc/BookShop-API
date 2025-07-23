@@ -8,9 +8,11 @@ D:\Github\BookShop-API\BookShopAPI\bin\Debug\net8.0\BookShopAPI.dll
 D:\Github\BookShop-API\BookShopAPI\bin\Debug\net8.0\BookShopAPI.pdb
 D:\Github\BookShop-API\BookShopAPI\bin\Debug\net8.0\Azure.Core.dll
 D:\Github\BookShop-API\BookShopAPI\bin\Debug\net8.0\Azure.Identity.dll
+D:\Github\BookShop-API\BookShopAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
 D:\Github\BookShop-API\BookShopAPI\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 D:\Github\BookShop-API\BookShopAPI\bin\Debug\net8.0\Humanizer.dll
 D:\Github\BookShop-API\BookShopAPI\bin\Debug\net8.0\MailKit.dll
+D:\Github\BookShop-API\BookShopAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Github\BookShop-API\BookShopAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Github\BookShop-API\BookShopAPI\bin\Debug\net8.0\Microsoft.Build.Locator.dll
 D:\Github\BookShop-API\BookShopAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -164,6 +166,7 @@ D:\Github\BookShop-API\BookShopAPI\obj\Debug\net8.0\staticwebassets.build.json
 D:\Github\BookShop-API\BookShopAPI\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\Github\BookShop-API\BookShopAPI\obj\Debug\net8.0\staticwebassets.development.json
 D:\Github\BookShop-API\BookShopAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Github\BookShop-API\BookShopAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Github\BookShop-API\BookShopAPI\obj\Debug\net8.0\BookShop.5F14A185.Up2Date
 D:\Github\BookShop-API\BookShopAPI\obj\Debug\net8.0\BookShopAPI.dll
 D:\Github\BookShop-API\BookShopAPI\obj\Debug\net8.0\refint\BookShopAPI.dll

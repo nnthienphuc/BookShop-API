@@ -1,6 +1,6 @@
 ﻿namespace BookShopAPI.Controllers.Admin
 {
-    public class hold
+    public class NganService
     {
     }
 }

@@ -37,20 +37,34 @@ namespace BookShopAPI.Controllers.Admin
             return Ok(new { token });
         }
 
-        [HttpPost("forgot-password")]
-        public async Task<IActionResult> ForgotPassword([FromBody] ResetPasswordDTO resetPasswordDTO)
-        {
-            await _authService.ResetPasswordAsync(resetPasswordDTO);
-            return Ok(new { message = "Reset password email sent successfully." });
-        }
-
         [HttpPost("reset-password")]
-        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordConfirmDTO dto)
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDTO resetPasswordDTO)
         {
-            await _authService.ResetPasswordFromTokenAsync(dto);
-            return Ok(new { message = "Password reset successfully." });
+            try
+            {
+                await _authService.ResetPasswordAsync(resetPasswordDTO);
+                return Ok(new { message = "Password reset email sent successfully." });
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
+        [HttpGet("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromQuery] string token)
+        {
+            var success = await _authService.ResetPasswordFromTokenAsync(token);
+
+            if (!success)
+                return BadRequest(new { message = "Token is invalid or expired." });
+
+            return Ok(new { message = "Password reset successful. Your new password is: '123456'" });
+        }
 
         [HttpPut("change-password")]
         [Authorize]
