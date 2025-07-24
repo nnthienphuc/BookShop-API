@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Github\\BookShop-API\\BookShopAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\authservice\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\authservice\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\data\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 52,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,26 +54,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RegisterDTO.cs",
               "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\DTOs\\RegisterDTO.cs",
               "RelativeDocumentMoniker": "Services\\Admin\\AuthService\\DTOs\\RegisterDTO.cs",
               "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\DTOs\\RegisterDTO.cs",
               "RelativeToolTip": "Services\\Admin\\AuthService\\DTOs\\RegisterDTO.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAwwCUAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowBQAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T10:23:50.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T10:23:50.596Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Implements\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\Admin\\AuthService\\Implements\\AuthService.cs",
               "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\AuthService\\Implements\\AuthService.cs",
               "RelativeToolTip": "Services\\Admin\\AuthService\\Implements\\AuthService.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowDsAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-24T10:20:06.953Z",
               "EditorCaption": ""
@@ -88,8 +87,7 @@
               "RelativeToolTip": "Data\\Models\\Staff.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAIwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T10:19:34.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T10:19:34.97Z"
             },
             {
               "$type": "Document",
@@ -113,8 +111,7 @@
               "RelativeToolTip": "Services\\Admin\\CategoryService\\Implements\\CategoryService.cs",
               "ViewState": "AgIAAHoAAAAAAAAAAAAuwIsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T09:56:14.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T09:56:14.526Z"
             },
             {
               "$type": "Document",
