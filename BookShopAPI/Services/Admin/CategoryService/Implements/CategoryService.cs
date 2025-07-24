@@ -67,11 +67,8 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
             };
         }
 
-        public async Task<IEnumerable<CategoryResponseDTO>> SearchByKeywordAsync(string keyword)
+        public async Task<IEnumerable<CategoryResponseDTO>> SearchByKeywordAsync(string? keyword)
         {
-            if (string.IsNullOrWhiteSpace(keyword))
-                throw new ArgumentException("Keyword cannot be null or whitespace.");
-
             var categories = await _repo.SearchByKeywordAsync(keyword);
 
             return categories.Select(x => new CategoryResponseDTO
@@ -145,7 +142,7 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
                     AuditAction.UPDATE,
                     "Category",
                     id,
-                    $"Updated category '{existingCategory.Name}' to '{dto.Name}', IsDeleted = {dto.IsDeleted}"
+                    $"Updated category '{existingCategory.Name}' to '{dto.Name}', IsDeleted '{existingCategory.IsDeleted}' to '{dto.IsDeleted}'"
                 );
             }
 

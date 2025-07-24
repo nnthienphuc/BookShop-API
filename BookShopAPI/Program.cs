@@ -23,8 +23,8 @@ var jwtKey = Environment.GetEnvironmentVariable("JWT_SECRET_KEY") ?? builder.Con
 var smtpUser = Environment.GetEnvironmentVariable("SMTP_USERNAME") ?? builder.Configuration["EmailSettings:SmtpUsername"];
 var smtpPass = Environment.GetEnvironmentVariable("SMTP_PASSWORD") ?? builder.Configuration["EmailSettings:SmtpPassword"];
 
-Console.WriteLine($"[DEBUG] JWT Key: {jwtKey}");
-Console.WriteLine($"[DEBUG] JWT Key Length: {jwtKey.Length}");
+//Console.WriteLine($"[DEBUG] JWT Key: {jwtKey}");
+//Console.WriteLine($"[DEBUG] JWT Key Length: {jwtKey.Length}");
 
 // Kết nối DB
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
