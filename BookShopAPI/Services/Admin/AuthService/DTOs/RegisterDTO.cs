@@ -34,7 +34,6 @@ namespace BookShopAPI.Services.Admin.AuthService.DTOs
         [StringLength(12)]
         [RegularExpression(@"\S+", ErrorMessage = "Citizen identification cannot be whitespace")]
         public required string CitizenIdentification { get; set; }
-        public required bool Role { get; set; }
         public required bool Gender { get; set; }
         public required String Password { get; set; }
         public required String ConfirmPassword { get; set; }

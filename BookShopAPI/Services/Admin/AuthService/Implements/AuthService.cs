@@ -57,7 +57,8 @@ namespace BookShopAPI.Services.Admin.AuthService.Implements
                 HashPassword = hashedPassword,
                 Gender = registerDTO.Gender,
                 Role = false,
-                IsActived = false
+                IsActived = false,
+                IsDeleted = false,
             };
 
             await _authRepository.AddAsync(staff);
