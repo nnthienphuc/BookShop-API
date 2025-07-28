@@ -128,7 +128,12 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
             if (existingName != null && existingName.Id != id)
                 throw new InvalidOperationException($"Category with name '{name}' is existing.");
 
-            var logCategory = existingCategory;
+            var logCategory = new Category
+            {
+                Id = existingCategory.Id,
+                Name = existingCategory.Name,
+                IsDeleted = existingCategory.IsDeleted
+            };
 
             existingCategory.Name = dto.Name;
             existingCategory.IsDeleted = dto.IsDeleted;
