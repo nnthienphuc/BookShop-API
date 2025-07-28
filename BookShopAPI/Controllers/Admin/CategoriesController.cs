@@ -41,7 +41,7 @@ namespace BookShopAPI.Controllers.Admin
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] CategoryRequestDTO dto)
         {
-            var result = await _service.AddAsync(dto);
+            await _service.AddAsync(dto);
 
             return Ok(new { message = "Add category successfully." });
         }
@@ -49,7 +49,7 @@ namespace BookShopAPI.Controllers.Admin
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(Guid id, [FromBody] CategoryRequestDTO dto)
         {
-            var result = await _service.UpdateAsync(id, dto);
+            await _service.UpdateAsync(id, dto);
 
             return Ok(new { message = "Update category successfully." });
         }
@@ -57,7 +57,7 @@ namespace BookShopAPI.Controllers.Admin
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var result = await _service.DeleteAsync(id);
+            await _service.DeleteAsync(id);
 
             return Ok(new { message = "Soft delete category successfully." });
         }
