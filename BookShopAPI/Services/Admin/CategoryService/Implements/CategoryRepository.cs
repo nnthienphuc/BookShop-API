@@ -29,7 +29,7 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
             return await _context.Categories.FirstOrDefaultAsync(x => x.Name == name);
         }
 
-        public async Task<IEnumerable<Category>> SearchByKeywordAsync(string keyword)
+        public async Task<IEnumerable<Category>> SearchByKeywordAsync(string? keyword)
         {
             return string.IsNullOrWhiteSpace(keyword)
                 ? await _context.Categories.ToListAsync()

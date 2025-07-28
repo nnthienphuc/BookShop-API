@@ -7,7 +7,7 @@ namespace BookShopAPI.Services.Admin.CategoryService.Interfaces
         Task<IEnumerable<Category>> GetAllAsync();
         Task<Category?> GetByIdAsync(Guid id);
         Task<Category?> GetByNameAsync(string name);
-        Task<IEnumerable<Category>> SearchByKeywordAsync(string keyword);
+        Task<IEnumerable<Category>> SearchByKeywordAsync(string? keyword);
         Task AddAsync(Category category);
         void Update(Category category);
         void Delete(Category category);

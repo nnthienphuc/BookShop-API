@@ -128,6 +128,8 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
             if (existingName != null && existingName.Id != id)
                 throw new InvalidOperationException($"Category with name '{name}' is existing.");
 
+            var logCategory = existingCategory;
+
             existingCategory.Name = dto.Name;
             existingCategory.IsDeleted = dto.IsDeleted;
             _repo.Update(existingCategory);
@@ -142,7 +144,7 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
                     AuditAction.UPDATE,
                     "Category",
                     id,
-                    $"Updated category '{existingCategory.Name}' to '{dto.Name}', IsDeleted '{existingCategory.IsDeleted}' to '{dto.IsDeleted}'"
+                    $"Updated category '{logCategory.Name}' to '{existingCategory.Name}', IsDeleted '{logCategory.IsDeleted}' to '{existingCategory.IsDeleted}'"
                 );
             }
 
