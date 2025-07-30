@@ -2,25 +2,37 @@
 using BookShopAPI.Common.Helper;
 using BookShopAPI.Data;
 using BookShopAPI.Models;
+using BookShopAPI.Services.Admin.AuthorService.Interfaces;
 using BookShopAPI.Services.Admin.BookService.DTOs;
 using BookShopAPI.Services.Admin.BookService.Interfaces;
+using BookShopAPI.Services.Admin.CategoryService.Interfaces;
+using BookShopAPI.Services.Admin.PublisherService.Interfaces;
 
 namespace BookShopAPI.Services.Admin.BookService.Implements
 {
     public class BookService : IBookService
     {
         private readonly IBookRepository _repo;
+        private readonly ICategoryRepository _categoryRepo;
+        private readonly IAuthorRepository _authorRepo;
+        private readonly IPublisherRepository _publisherRepo;
         private readonly ApplicationDbContext _context;
         private readonly IHttpContextAccessor _httpContext;
         private readonly IWebHostEnvironment _env;
 
         public BookService(
-            IBookRepository repo,
-            ApplicationDbContext context,
-            IHttpContextAccessor httpContext,
-            IWebHostEnvironment env)
+    IBookRepository repo,
+    ICategoryRepository categoryRepo,
+    IAuthorRepository authorRepo,
+    IPublisherRepository publisherRepo,
+    ApplicationDbContext context,
+    IHttpContextAccessor httpContext,
+    IWebHostEnvironment env)
         {
             _repo = repo;
+            _categoryRepo = categoryRepo;
+            _authorRepo = authorRepo;
+            _publisherRepo = publisherRepo;
             _context = context;
             _httpContext = httpContext;
             _env = env;
@@ -35,15 +47,23 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
                 Id = x.Id,
                 Title = x.Title,
                 Isbn = x.Isbn,
+
+                AuthorId = x.AuthorId,
                 AuthorName = x.Author.Name,
+
+                CategoryId = x.CategoryId,
                 CategoryName = x.Category.Name,
+
+                PublisherId = x.PublisherId,
                 PublisherName = x.Publisher.Name,
+
                 YearOfPublication = x.YearOfPublication,
                 Price = x.Price,
                 Quantity = x.Quantity,
                 IsDeleted = x.IsDeleted,
                 Image = x.Image
             });
+
         }
 
         public async Task<IEnumerable<BookResponseDTO>> SearchByKeywordAsync(string? keyword)
@@ -55,21 +75,30 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
                 Id = x.Id,
                 Title = x.Title,
                 Isbn = x.Isbn,
+
+                AuthorId = x.AuthorId,
                 AuthorName = x.Author.Name,
+
+                CategoryId = x.CategoryId,
                 CategoryName = x.Category.Name,
+
+                PublisherId = x.PublisherId,
                 PublisherName = x.Publisher.Name,
+
                 YearOfPublication = x.YearOfPublication,
                 Price = x.Price,
                 Quantity = x.Quantity,
                 IsDeleted = x.IsDeleted,
                 Image = x.Image
             });
+
         }
 
         public async Task<BookResponseDTO?> GetByIdAsync(Guid id)
         {
             var book = await _repo.GetByIdAsync(id);
-            if (book == null) return null;
+            if (book == null)
+                throw new KeyNotFoundException($"Book with id '{id} is not found.");
 
             return new BookResponseDTO
             {
@@ -92,7 +121,24 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
             try
             {
                 if (string.IsNullOrWhiteSpace(dto.Isbn))
-                    throw new ArgumentException("ISBN cannot be null or whitespace.");
+                    throw new ArgumentException("Mã ISBN là bắt buộc.");
+
+                if (string.IsNullOrWhiteSpace(dto.Title))
+                    throw new ArgumentException("Tiêu đề là bắt buộc.");
+
+                if (dto.YearOfPublication <= 1500)
+                    throw new ArgumentException("Năm xuất bản phải lớn hơn 1500.");
+
+                if (dto.Price <= 1000)
+                    throw new ArgumentException("Giá phải lớn hơn 1000.");
+
+                if (dto.Quantity < 0)
+                    throw new ArgumentException("Số lượng phải lớn hơn hoặc bằng 0.");
+
+                await ValidateForeignKeysAsync(dto);
+
+                if (imageFile == null || imageFile.Length == 0)
+                    throw new ArgumentException("Ảnh bìa sách là bắt buộc.");
 
                 var existing = await _repo.GetByIsbnAsync(dto.Isbn);
                 if (existing != null)
@@ -127,7 +173,7 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
             }
             
             catch (Exception ex)
-    {
+            {
                 // Ghi log hoặc re-throw lỗi cụ thể để debug
                 throw new Exception($"Lỗi cập nhật sách: {ex.Message}", ex);
             }
@@ -142,7 +188,21 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
                     throw new KeyNotFoundException($"Book with id '{id}' not found.");
 
                 if (string.IsNullOrWhiteSpace(dto.Isbn))
-                    throw new ArgumentException("ISBN cannot be null or whitespace.");
+                    throw new ArgumentException("Mã ISBN là bắt buộc.");
+
+                if (string.IsNullOrWhiteSpace(dto.Title))
+                    throw new ArgumentException("Tiêu đề là bắt buộc.");
+
+                if (dto.YearOfPublication <= 1500)
+                    throw new ArgumentException("Năm xuất bản phải lớn hơn 1500.");
+
+                if (dto.Price <= 1000)
+                    throw new ArgumentException("Giá phải lớn hơn 1000.");
+
+                if (dto.Quantity < 0)
+                    throw new ArgumentException("Số lượng phải lớn hơn hoặc bằng 0.");
+
+                await ValidateForeignKeysAsync(dto);
 
                 var duplicate = await _repo.GetByIsbnAsync(dto.Isbn);
                 if (duplicate != null && duplicate.Id != id)
@@ -226,6 +286,21 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
             }
 
             return $"images/books/{fileName}";
+        }
+
+        private async Task ValidateForeignKeysAsync(BookRequestDTO dto)
+        {
+            var category = await _categoryRepo.GetByIdAsync(dto.CategoryId);
+            if (category == null || category.IsDeleted)
+                throw new ArgumentException("Danh mục không hợp lệ hoặc đã bị xóa.");
+
+            var author = await _authorRepo.GetByIdAsync(dto.AuthorId);
+            if (author == null || author.IsDeleted)
+                throw new ArgumentException("Tác giả không hợp lệ hoặc đã bị xóa.");
+
+            var publisher = await _publisherRepo.GetByIdAsync(dto.PublisherId);
+            if (publisher == null || publisher.IsDeleted)
+                throw new ArgumentException("Nhà xuất bản không hợp lệ hoặc đã bị xóa.");
         }
     }
 }
