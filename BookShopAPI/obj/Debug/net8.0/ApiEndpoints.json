@@ -284,5 +284,100 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.PublishersController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/Publishers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.PublishersController",
+    "Method": "Add",
+    "RelativePath": "api/admin/Publishers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "BookShopAPI.Services.Admin.PublisherService.DTOs.PublisherRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.PublishersController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/Publishers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.PublishersController",
+    "Method": "Update",
+    "RelativePath": "api/admin/Publishers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BookShopAPI.Services.Admin.PublisherService.DTOs.PublisherRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.PublishersController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/Publishers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.PublishersController",
+    "Method": "SearchByKeyword",
+    "RelativePath": "api/admin/Publishers/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

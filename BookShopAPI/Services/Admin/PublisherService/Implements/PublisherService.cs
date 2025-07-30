@@ -138,7 +138,7 @@ namespace BookShopAPI.Services.Admin.PublisherService.Implements
                 await AuditHelper.LogAuditAsync(
                    _httpContext,
                     _context,
-                    AuditAction.ADD,
+                    AuditAction.UPDATE,
                     "Publisher",
                     id,
                     $"Updated publisher '{logPublisher.Name}' to '{existingPublisher.Name}', '{logPublisher.IsDeleted}' to '{existingPublisher.IsDeleted}'");
@@ -166,7 +166,7 @@ namespace BookShopAPI.Services.Admin.PublisherService.Implements
                 await AuditHelper.LogAuditAsync(
                    _httpContext,
                     _context,
-                    AuditAction.ADD,
+                    AuditAction.DELETE,
                     "Publisher",
                     id,
                     $"Soft deleted publisher '{existingPublisher.Name}'");
