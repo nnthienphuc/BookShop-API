@@ -210,7 +210,14 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
 
                 var logBook = new Book
                 {
+                    Isbn = book.Isbn,
                     Title = book.Title,
+                    CategoryId = book.CategoryId,
+                    AuthorId = book.AuthorId,
+                    PublisherId = book.PublisherId,
+                    YearOfPublication = book.YearOfPublication,
+                    Price = book.Price,
+                    Quantity = book.Quantity,
                     IsDeleted = book.IsDeleted,
                     Image = book.Image
                 };
@@ -236,7 +243,7 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
 
                 if (result)
                 {
-                    await AuditHelper.LogAuditAsync(_httpContext, _context, AuditAction.UPDATE, "Book", id, $"Updated book '{logBook.Title}' to '{book.Title}', IsDeleted: '{logBook.IsDeleted}' → '{book.IsDeleted}'");
+                    await AuditHelper.LogAuditAsync(_httpContext, _context, AuditAction.UPDATE, "Book", id, $"Updated book '{logBook.Isbn}' to '{book.Isbn}', '{logBook.Title}' to '{book.Title}', '{logBook.CategoryId}' to '{book.CategoryId}', '{logBook.AuthorId}' to '{book.AuthorId}', '{logBook.PublisherId}' to '{book.PublisherId}', '{logBook.YearOfPublication}' to '{book.YearOfPublication}', '{logBook.Price}' to '{logBook.Price}', '{logBook.Quantity}' to '{book.Quantity}', IsDeleted: '{logBook.IsDeleted}' → '{book.IsDeleted}'");
                 }
 
                 return result;
