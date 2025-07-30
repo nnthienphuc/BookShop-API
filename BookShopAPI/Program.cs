@@ -4,6 +4,8 @@ using BookShopAPI.Services.Admin.AuthorService.Implements;
 using BookShopAPI.Services.Admin.AuthorService.Interfaces;
 using BookShopAPI.Services.Admin.AuthService.Implements;
 using BookShopAPI.Services.Admin.AuthService.Interfaces;
+using BookShopAPI.Services.Admin.BookService.Implements;
+using BookShopAPI.Services.Admin.BookService.Interfaces;
 using BookShopAPI.Services.Admin.CategoryService.Implements;
 using BookShopAPI.Services.Admin.CategoryService.Interfaces;
 using BookShopAPI.Services.Admin.PublisherService.Implements;
@@ -101,6 +103,8 @@ builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 builder.Services.AddScoped<IPublisherService, PublisherService>();
 builder.Services.AddScoped<IPublisherRepository, PublisherRepository>();
+builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
 
 // Helpers
 builder.Services.AddHttpContextAccessor();

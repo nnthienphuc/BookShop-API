@@ -1,1 +1,3 @@
 wwwroot\images\books\abc.jpg
+wwwroot\images\books\ed45abb1-1227-4e3c-bf2c-a7f501c5f4e8.png
+wwwroot\images\books\8935212366533.png
