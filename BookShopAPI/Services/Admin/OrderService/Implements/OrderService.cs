@@ -150,6 +150,7 @@ namespace BookShopAPI.Services.Admin.OrderService.Implements
                 CustomerId = orderCreateDTO.CustomerId,
                 PromotionId = orderCreateDTO.PromotionId,
                 CreatedTime = DateTime.Now,
+                PaymentMethod = orderCreateDTO.PaymentMethod,
                 Status = "Thành công"
             };
 
