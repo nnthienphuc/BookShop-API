@@ -86,8 +86,7 @@
               "RelativeToolTip": "Services\\Admin\\OrderService\\Interfaces\\IOrderService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T09:31:46.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T09:31:46.399Z"
             },
             {
               "$type": "Document",
@@ -109,7 +108,7 @@
               "RelativeDocumentMoniker": "Services\\Admin\\OrderService\\Implements\\OrderService.cs",
               "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\OrderService\\Implements\\OrderService.cs",
               "RelativeToolTip": "Services\\Admin\\OrderService\\Implements\\OrderService.cs",
-              "ViewState": "AgIAABMBAAAAAAAAAAAYwCIBAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABMBAAAAAAAAAAAYwCgBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-31T09:31:40.507Z",
               "EditorCaption": ""
@@ -220,8 +219,7 @@
               "RelativeToolTip": "Controllers\\Admin\\OrdersController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T09:29:24.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T09:29:24.183Z"
             }
           ]
         }
