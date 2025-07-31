@@ -471,6 +471,101 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BookShopAPI.Controllers.Admin.CustomersController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/Customers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.CustomersController",
+    "Method": "Add",
+    "RelativePath": "api/admin/Customers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerCreateDTO",
+        "Type": "BookShopAPI.Services.Admin.CustomerService.DTOs.CustomerRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.CustomersController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/Customers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.CustomersController",
+    "Method": "Update",
+    "RelativePath": "api/admin/Customers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "customerUpdateDTO",
+        "Type": "BookShopAPI.Services.Admin.CustomerService.DTOs.CustomerRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.CustomersController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/Customers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.CustomersController",
+    "Method": "SearchByKeyword",
+    "RelativePath": "api/admin/Customers/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BookShopAPI.Controllers.Admin.PromotionsController",
     "Method": "GetAll",
     "RelativePath": "api/admin/Promotions",
