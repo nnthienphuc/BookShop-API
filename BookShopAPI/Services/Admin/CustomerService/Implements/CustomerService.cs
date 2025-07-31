@@ -129,7 +129,7 @@ namespace BookShopAPI.Services.Admin.CustomerService.Implements
                     AuditAction.ADD,
                     "Customer",
                     customer.Id,
-                    $"Created category '{customer.FamilyName}' + ' ' + '{customer.GivenName}'"
+                    $"Created customer '{customer.FamilyName} {customer.GivenName}'"
                 );
             }
 
@@ -181,7 +181,7 @@ namespace BookShopAPI.Services.Admin.CustomerService.Implements
                     AuditAction.UPDATE,
                     "Customer",
                     id,
-                    $"Updated category '{logCustomer.FamilyName}' to '{existingCustomer.FamilyName}', '{logCustomer.GivenName}' to '{existingCustomer.GivenName}', '{logCustomer.DateOfBirth}' to '{existingCustomer.DateOfBirth}', '{logCustomer.Address}' to '{existingCustomer.Address}', '{logCustomer.Phone}' to '{existingCustomer.Phone}', '{logCustomer.Gender}' to '{existingCustomer.Gender}'"
+                    $"Updated customer '{logCustomer.FamilyName}' to '{existingCustomer.FamilyName}', '{logCustomer.GivenName}' to '{existingCustomer.GivenName}', '{logCustomer.DateOfBirth}' to '{existingCustomer.DateOfBirth}', '{logCustomer.Address}' to '{existingCustomer.Address}', '{logCustomer.Phone}' to '{existingCustomer.Phone}', '{logCustomer.Gender}' to '{existingCustomer.Gender}'"
                 );
             }
 
@@ -210,7 +210,7 @@ namespace BookShopAPI.Services.Admin.CustomerService.Implements
                     AuditAction.DELETE,
                     "Customer",
                     id,
-                    $"Soft deleted category '{existingCustomer.FamilyName} {existingCustomer.GivenName}'"
+                    $"Soft deleted customer '{existingCustomer.FamilyName} {existingCustomer.GivenName}'"
                 );
             }
 

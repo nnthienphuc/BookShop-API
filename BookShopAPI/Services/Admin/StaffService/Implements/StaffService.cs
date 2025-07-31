@@ -221,7 +221,7 @@ namespace BookShopAPI.Services.Admin.StaffService.Implements
                     AuditAction.UPDATE,
                     "Staff",
                     id,
-                    $"Updated category '{logStaff.FamilyName}' to '{existingStaff.FamilyName}', '{logStaff.GivenName}' to '{existingStaff.GivenName}', '{logStaff.DateOfBirth}' to '{existingStaff.DateOfBirth}', '{logStaff.Address}' to '{existingStaff.Address}', '{logStaff.Phone}' to '{existingStaff.Phone}', '{logStaff.Email}' to '{existingStaff.Email}', '{logStaff.CitizenIdentification}' to '{existingStaff.CitizenIdentification}', '{logStaff.Role}' to '{existingStaff.Role}', '{logStaff.Gender}' to '{existingStaff.Gender}'"
+                    $"Updated staff '{logStaff.FamilyName}' to '{existingStaff.FamilyName}', '{logStaff.GivenName}' to '{existingStaff.GivenName}', '{logStaff.DateOfBirth}' to '{existingStaff.DateOfBirth}', '{logStaff.Address}' to '{existingStaff.Address}', '{logStaff.Phone}' to '{existingStaff.Phone}', '{logStaff.Email}' to '{existingStaff.Email}', '{logStaff.CitizenIdentification}' to '{existingStaff.CitizenIdentification}', '{logStaff.Role}' to '{existingStaff.Role}', '{logStaff.Gender}' to '{existingStaff.Gender}'"
                 );
             }
 
