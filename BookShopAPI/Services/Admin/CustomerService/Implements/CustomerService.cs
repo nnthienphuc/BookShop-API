@@ -210,7 +210,7 @@ namespace BookShopAPI.Services.Admin.CustomerService.Implements
                     AuditAction.DELETE,
                     "Customer",
                     id,
-                    $"Soft deleted category '{existingCustomer.FamilyName}' + ' ' + '{existingCustomer.GivenName}'"
+                    $"Soft deleted category '{existingCustomer.FamilyName} {existingCustomer.GivenName}'"
                 );
             }
 

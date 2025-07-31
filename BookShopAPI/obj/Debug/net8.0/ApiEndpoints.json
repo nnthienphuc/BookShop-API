@@ -754,5 +754,84 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.StaffsController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/Staffs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.StaffsController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/Staffs/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.StaffsController",
+    "Method": "Update",
+    "RelativePath": "api/admin/Staffs/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "staffUpdateDTO",
+        "Type": "BookShopAPI.Services.Admin.StaffService.DTOs.StaffRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.StaffsController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/Staffs/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.StaffsController",
+    "Method": "SearchByKeyword",
+    "RelativePath": "api/admin/Staffs/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

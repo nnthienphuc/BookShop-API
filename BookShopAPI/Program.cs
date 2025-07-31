@@ -14,6 +14,8 @@ using BookShopAPI.Services.Admin.PromotionService.Implements;
 using BookShopAPI.Services.Admin.PromotionService.Interfaces;
 using BookShopAPI.Services.Admin.PublisherService.Implements;
 using BookShopAPI.Services.Admin.PublisherService.Interfaces;
+using BookShopAPI.Services.Admin.StaffService.Implements;
+using BookShopAPI.Services.Admin.StaffService.Interfaces;
 using BookShopAPI.Services.EmailService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -113,6 +115,8 @@ builder.Services.AddScoped<IPromotionRepository, PromotionRepository>();
 builder.Services.AddScoped<IPromotionService, PromotionService>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<IStaffRepository, StaffRepository>();
+builder.Services.AddScoped<IStaffService, StaffService>();
 
 // Helpers
 builder.Services.AddHttpContextAccessor();

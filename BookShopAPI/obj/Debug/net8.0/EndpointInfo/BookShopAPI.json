@@ -1166,6 +1166,123 @@
           }
         }
       }
+    },
+    "/api/admin/Staffs": {
+      "get": {
+        "tags": [
+          "Staffs"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/admin/Staffs/{id}": {
+      "get": {
+        "tags": [
+          "Staffs"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Staffs"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Staffs"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/admin/Staffs/search": {
+      "get": {
+        "tags": [
+          "Staffs"
+        ],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1435,6 +1552,77 @@
             "minLength": 0,
             "pattern": "\\S+",
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StaffRequestDTO": {
+        "required": [
+          "address",
+          "citizenIdentification",
+          "dateOfBirth",
+          "email",
+          "familyName",
+          "gender",
+          "givenName",
+          "isActived",
+          "isDeleted",
+          "phone",
+          "role"
+        ],
+        "type": "object",
+        "properties": {
+          "familyName": {
+            "maxLength": 70,
+            "minLength": 0,
+            "pattern": ".*\\S.*",
+            "type": "string"
+          },
+          "givenName": {
+            "maxLength": 30,
+            "minLength": 0,
+            "pattern": ".*\\S.*",
+            "type": "string"
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date"
+          },
+          "address": {
+            "maxLength": 50,
+            "minLength": 0,
+            "pattern": ".*\\S.*",
+            "type": "string"
+          },
+          "phone": {
+            "maxLength": 10,
+            "minLength": 0,
+            "pattern": "\\S+",
+            "type": "string"
+          },
+          "email": {
+            "maxLength": 50,
+            "minLength": 0,
+            "pattern": "\\S+",
+            "type": "string"
+          },
+          "citizenIdentification": {
+            "maxLength": 12,
+            "minLength": 0,
+            "pattern": "\\S+",
+            "type": "string"
+          },
+          "role": {
+            "type": "boolean"
+          },
+          "gender": {
+            "type": "boolean"
+          },
+          "isActived": {
+            "type": "boolean"
+          },
+          "isDeleted": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
