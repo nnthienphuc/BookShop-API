@@ -18,6 +18,7 @@ using BookShopAPI.Services.Admin.PublisherService.Implements;
 using BookShopAPI.Services.Admin.PublisherService.Interfaces;
 using BookShopAPI.Services.Admin.StaffService.Implements;
 using BookShopAPI.Services.Admin.StaffService.Interfaces;
+using BookShopAPI.Services.Admin.StatisticsService;
 using BookShopAPI.Services.EmailService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -121,6 +122,7 @@ builder.Services.AddScoped<IStaffRepository, StaffRepository>();
 builder.Services.AddScoped<IStaffService, StaffService>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IStatisticsService, StatisticsService>();
 
 // Helpers
 builder.Services.AddHttpContextAccessor();
