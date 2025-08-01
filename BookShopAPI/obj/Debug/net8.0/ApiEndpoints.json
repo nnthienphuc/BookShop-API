@@ -968,6 +968,22 @@
   },
   {
     "ContainingType": "BookShopAPI.Controllers.Admin.StatisticsController",
+    "Method": "GetYearlyGrowth",
+    "RelativePath": "api/admin/statistics/growth",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookShopAPI.Controllers.Admin.StatisticsController",
     "Method": "GetRevenue",
     "RelativePath": "api/admin/statistics/revenue",
     "HttpMethod": "GET",
