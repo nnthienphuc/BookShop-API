@@ -21,6 +21,7 @@ namespace BookShopAPI.Services.Admin.OrderService.Implements
                 .Include(o => o.Customer)
                 .Include(o => o.Promotion)
                 .Include(o => o.OrderItems).ThenInclude(oi => oi.Book)
+                .OrderByDescending(o => o.CreatedTime)
                 .ToListAsync();
         }
 

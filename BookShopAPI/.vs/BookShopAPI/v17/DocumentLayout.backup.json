@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Github\\BookShop-API\\BookShopAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\data\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:data\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\services\\admin\\orderservice\\implements\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:services\\admin\\orderservice\\implements\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|d:\\github\\bookshop-api\\bookshopapi\\controllers\\admin\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F7F6F5E-E81F-4859-A5E6-5F20307AD32A}|BookShopAPI.csproj|solutionrelative:controllers\\admin\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,19 +51,55 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StatisticsController.cs",
-              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Controllers\\Admin\\StatisticsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Admin\\StatisticsController.cs",
-              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Controllers\\Admin\\StatisticsController.cs",
-              "RelativeToolTip": "Controllers\\Admin\\StatisticsController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwBwAAAAYAAAAAAAAAA==",
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Data\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\Customer.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Data\\Models\\Customer.cs",
+              "RelativeToolTip": "Data\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T10:25:19.785Z",
+              "WhenOpened": "2025-08-01T16:05:58.346Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAIAwwHAAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T16:05:25.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\OrderService\\Implements\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "Services\\Admin\\OrderService\\Implements\\OrderRepository.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\OrderService\\Implements\\OrderRepository.cs",
+              "RelativeToolTip": "Services\\Admin\\OrderService\\Implements\\OrderRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T15:18:56.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StatisticsController.cs",
+              "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Controllers\\Admin\\StatisticsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Admin\\StatisticsController.cs",
+              "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Controllers\\Admin\\StatisticsController.cs",
+              "RelativeToolTip": "Controllers\\Admin\\StatisticsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T10:25:19.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "StatisticsService.cs",
               "DocumentMoniker": "D:\\Github\\BookShop-API\\BookShopAPI\\Services\\Admin\\StatisticsService\\StatisticsService.cs",
               "RelativeDocumentMoniker": "Services\\Admin\\StatisticsService\\StatisticsService.cs",
