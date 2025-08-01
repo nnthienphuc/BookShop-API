@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Controllers\\Admin\\StatisticsController.cs",
               "ToolTip": "D:\\Github\\BookShop-API\\BookShopAPI\\Controllers\\Admin\\StatisticsController.cs",
               "RelativeToolTip": "Controllers\\Admin\\StatisticsController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwBwAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-01T10:25:19.785Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "Services\\Admin\\StatisticsService\\StatisticsService.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAA9wBsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T10:13:05.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T10:13:05.84Z"
             }
           ]
         }
