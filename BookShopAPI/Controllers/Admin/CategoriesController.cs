@@ -43,7 +43,7 @@ namespace BookShopAPI.Controllers.Admin
         {
             await _service.AddAsync(dto);
 
-            return Ok(new { message = "Add category successfully." });
+            return Ok(new { message = "Thêm thể loại thành công." });
         }
 
         [HttpPut("{id}")]
@@ -51,7 +51,7 @@ namespace BookShopAPI.Controllers.Admin
         {
             await _service.UpdateAsync(id, dto);
 
-            return Ok(new { message = "Update category successfully." });
+            return Ok(new { message = "Cập nhật thể loại thành công." });
         }
 
         [HttpDelete("{id}")]
@@ -59,7 +59,7 @@ namespace BookShopAPI.Controllers.Admin
         {
             await _service.DeleteAsync(id);
 
-            return Ok(new { message = "Soft delete category successfully." });
+            return Ok(new { message = "Xóa (mềm) thể loại thành công." });
         }
     }
 }

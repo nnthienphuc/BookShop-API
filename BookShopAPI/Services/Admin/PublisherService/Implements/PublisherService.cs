@@ -38,7 +38,7 @@ namespace BookShopAPI.Services.Admin.PublisherService.Implements
             var publisher = await _repo.GetByIdAsync(id);
 
             if (publisher == null)
-                throw new KeyNotFoundException($"Publisher witd id '{id}' is not found.");
+                throw new KeyNotFoundException($"Không tìm thấy nhà xuất bản có id '{id}'.");
 
             return new PublisherResponseDTO
             {
@@ -53,7 +53,7 @@ namespace BookShopAPI.Services.Admin.PublisherService.Implements
             var publisher = await _repo.GetByNameAsync(name);
 
             if (publisher == null)
-                throw new KeyNotFoundException($"Publisher with name '{name}' is not found.");
+                throw new KeyNotFoundException($"Không tìm thấy nhà xuất bản có tên '{name}'.");
 
             return new PublisherResponseDTO
             {
@@ -78,11 +78,11 @@ namespace BookShopAPI.Services.Admin.PublisherService.Implements
         public async Task<bool> AddAsync(PublisherRequestDTO dto)
         {
             if (string.IsNullOrWhiteSpace(dto.Name))
-                throw new ArgumentException("Name cannot be null.");
+                throw new ArgumentException("Tên không thể là null hoặc khoảng trắng.");
 
             var existingPublisher = await _repo.GetByNameAsync(dto.Name);
             if (existingPublisher != null)
-                throw new InvalidOperationException($"Publisher with name '{dto.Name}' is existing.");
+                throw new InvalidOperationException($"Nhà xuất bản có tên '{dto.Name}' đã tồn tại.");
 
             var publisher = new Publisher
             {
@@ -110,15 +110,15 @@ namespace BookShopAPI.Services.Admin.PublisherService.Implements
         public async Task<bool> UpdateAsync(Guid id, PublisherRequestDTO dto)
         {
             if (string.IsNullOrWhiteSpace(dto.Name))
-                throw new ArgumentException("Name cannot be null.");
+                throw new ArgumentException("Tên không thể là null hoặc khoảng trắng.");
 
             var existingPublisher = await _repo.GetByIdAsync(id);
             if (existingPublisher == null)
-                throw new KeyNotFoundException($"Publisher with id '{id}' is not found");
+                throw new KeyNotFoundException($"Không tìm thấy nhà xuất bản có id '{id}'.");
 
             var existingName = await _repo.GetByNameAsync(dto.Name);
             if (existingName != null && existingName.Id != id)
-                throw new InvalidOperationException($"Category with name '{dto.Name}' is existing.");
+                throw new InvalidOperationException($"Nhà xuất bản có tên '{dto.Name}' đã tồn tại.");
 
             var logPublisher = new Publisher
             {
@@ -152,10 +152,10 @@ namespace BookShopAPI.Services.Admin.PublisherService.Implements
             var existingPublisher = await _repo.GetByIdAsync(id);
 
             if (existingPublisher == null)
-                throw new KeyNotFoundException($"Publisher with id '{id}' is not found.");
+                throw new KeyNotFoundException($"Không tìm thấy nhà xuất bản có id '{id}'.");
 
             if (existingPublisher.IsDeleted == true)
-                throw new InvalidOperationException($"Publisher with id '{id}' has been deleted.");
+                throw new InvalidOperationException($"Nhà xuất bản có id '{id}' đã bị xóa.");
 
             _repo.Delete(existingPublisher);
 

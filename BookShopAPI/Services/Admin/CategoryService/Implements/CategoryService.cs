@@ -39,7 +39,7 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
             var category = await _repo.GetByIdAsync(id);
 
             if (category == null)
-                throw new KeyNotFoundException($"Category with id '{id}' is not found.");
+                throw new KeyNotFoundException($"Không tìm thấy danh mục có id '{id}'.");
 
             return new CategoryResponseDTO
             {
@@ -52,12 +52,12 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
         public async Task<CategoryResponseDTO?> GetByNameAsync(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
-                throw new ArgumentException("Name cannot be null or whitespace.");
+                throw new ArgumentException("Tên không thể là null hoặc khoảng trắng.");
 
             var category = await _repo.GetByNameAsync(name);
 
             if (category == null)
-                throw new KeyNotFoundException($"Category with name '{name}' is not found.");
+                throw new KeyNotFoundException($"Không tìm thấy danh mục có tên '{name}'.");
 
             return new CategoryResponseDTO
             {
@@ -83,11 +83,11 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
         {
             string name = dto.Name;
             if (string.IsNullOrWhiteSpace(name))
-                throw new ArgumentException("Name cannot be null or whitespace");
+                throw new ArgumentException("Tên không thể là null hoặc khoảng trắng.");
 
             var existingName = await _repo.GetByNameAsync(name);
             if (existingName != null)
-                throw new InvalidOperationException($"Category with name '{name}' is existing.");
+                throw new InvalidOperationException($"Danh mục có tên '{name}' đã tồn tại.");
 
             var category = new Category
             {
@@ -118,15 +118,15 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
         {
             string name = dto.Name;
             if (string.IsNullOrWhiteSpace(name))
-                throw new ArgumentException("Name cannot be null or whitespace.");
+                throw new ArgumentException("Tên không thể là null hoặc khoảng trắng.");
 
             var existingCategory = await _repo.GetByIdAsync(id);
             if (existingCategory == null)
-                throw new KeyNotFoundException($"Category with id '{id}' is not found.");
+                throw new KeyNotFoundException($"Không tìm thấy danh mục có id '{id}'.");
 
             var existingName = await _repo.GetByNameAsync(name);
             if (existingName != null && existingName.Id != id)
-                throw new InvalidOperationException($"Category with name '{name}' is existing.");
+                throw new InvalidOperationException($"Danh mục có tên '{name}' đã tồn tại.");
 
             var logCategory = new Category
             {
@@ -160,10 +160,10 @@ namespace BookShopAPI.Services.Admin.CategoryService.Implements
         {
             var existingCategory = await _repo.GetByIdAsync(id);
             if (existingCategory == null)
-                throw new KeyNotFoundException($"Category with id '{id}' is not found.");
+                throw new KeyNotFoundException($"Không tìm thấy danh mục có id '{id}'.");
 
             if (existingCategory.IsDeleted == true)
-                throw new InvalidOperationException($"Category with id '{id}' has been deleted.");
+                throw new InvalidOperationException($"Danh mục có id '{id}' đã bị xóa.");
 
             _repo.Delete(existingCategory);
 

@@ -37,7 +37,7 @@ namespace BookShopAPI.Services.Admin.AuthorService.Implements
             var author = await _repo.GetByIdAsync(id);
 
             if (author == null)
-                throw new KeyNotFoundException($"Author with id '{id}' is not found.");
+                throw new KeyNotFoundException($"Không tìm thấy tác giả có id '{id}'.");
 
             return new AuthorResponseDTO
             {
@@ -62,7 +62,7 @@ namespace BookShopAPI.Services.Admin.AuthorService.Implements
         public async Task<bool> AddAsync(AuthorRequestDTO dto)
         {
             if (string.IsNullOrWhiteSpace(dto.Name))
-                throw new ArgumentException("Name cannot be null or whitespace.");
+                throw new ArgumentException("Tên không thể là null hoặc khoảng trắng.");
 
             var author = new Author
             {
@@ -93,10 +93,10 @@ namespace BookShopAPI.Services.Admin.AuthorService.Implements
         {
             var existingAuthor = await _repo.GetByIdAsync(id);
             if (existingAuthor == null)
-                throw new KeyNotFoundException($"Author with id '{id}' is found.");
+                throw new KeyNotFoundException($"Không tìm tìm thấy tác giả có id '{id}'.");
 
             if (string.IsNullOrWhiteSpace(dto.Name))
-                throw new ArgumentException("Name cannot be null or whitespace.");
+                throw new ArgumentException("Tên không thể là null hoặc khoảng trắng.");
 
             var logAuthor = new Author
             {
@@ -131,10 +131,10 @@ namespace BookShopAPI.Services.Admin.AuthorService.Implements
         {
             var existingAuthor = await _repo.GetByIdAsync(id);
             if (existingAuthor == null)
-                throw new KeyNotFoundException($"Author with id '{id}' is not found");
+                throw new KeyNotFoundException($"Không tìm thấy tác giả có id '{id}'.");
 
             if (existingAuthor.IsDeleted == true)
-                throw new InvalidOperationException($"Author with id '{id}' has been deleted.");
+                throw new InvalidOperationException($"Tác giả có id '{id}' đã bị xóa.");
 
             _repo.Delete(existingAuthor);
 

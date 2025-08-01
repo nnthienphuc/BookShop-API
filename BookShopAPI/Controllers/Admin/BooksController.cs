@@ -31,22 +31,22 @@ namespace BookShopAPI.Controllers.Admin
         [HttpPost]
         public async Task<IActionResult> Add([FromForm] BookRequestDTO dto, IFormFile? imageFile)
         {
-            var result = await _service.AddAsync(dto, imageFile);
-            return result ? Ok(new { message = "Thêm sách thành công!" }) : BadRequest("Thêm thất bại!");
+            await _service.AddAsync(dto, imageFile);
+            return Ok(new { message = "Thêm sách thành công!" });
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(Guid id, [FromForm] BookRequestDTO dto, IFormFile? imageFile)
         {
-            var result = await _service.UpdateAsync(id, dto, imageFile);
-            return result ? Ok(new { message = "Cập nhật thành công!" }) : BadRequest("Cập nhật thất bại!");
+            await _service.UpdateAsync(id, dto, imageFile);
+            return Ok(new { message = "Cập nhật thành công!" });
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var result = await _service.DeleteAsync(id);
-            return result ? Ok(new { message = "Xoá thành công!" }) : BadRequest("Xoá thất bại!");
+            await _service.DeleteAsync(id);
+            return Ok(new { message = "Xoá thành công!" });
         }
     }
 }

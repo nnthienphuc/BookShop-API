@@ -98,7 +98,7 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
         {
             var book = await _repo.GetByIdAsync(id);
             if (book == null)
-                throw new KeyNotFoundException($"Book with id '{id} is not found.");
+                throw new KeyNotFoundException($"Không tìm thấy sách có id '{id}.");
 
             return new BookResponseDTO
             {
@@ -142,7 +142,7 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
 
                 var existing = await _repo.GetByIsbnAsync(dto.Isbn);
                 if (existing != null)
-                    throw new InvalidOperationException($"Book with ISBN '{dto.Isbn}' already exists.");
+                    throw new InvalidOperationException($"Sách có ISBN '{dto.Isbn}' đã tồn tại.");
 
                 var imagePath = await SaveImageAsync(imageFile, dto.Isbn);
 
@@ -185,7 +185,7 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
             {
                 var book = await _repo.GetByIdAsync(id);
                 if (book == null)
-                    throw new KeyNotFoundException($"Book with id '{id}' not found.");
+                    throw new KeyNotFoundException($"Không tìm thấy sách có id '{id}'.");
 
                 if (string.IsNullOrWhiteSpace(dto.Isbn))
                     throw new ArgumentException("Mã ISBN là bắt buộc.");
@@ -206,7 +206,7 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
 
                 var duplicate = await _repo.GetByIsbnAsync(dto.Isbn);
                 if (duplicate != null && duplicate.Id != id)
-                    throw new InvalidOperationException($"Book with ISBN '{dto.Isbn}' already exists.");
+                    throw new InvalidOperationException($"Sách có ISBN '{dto.Isbn}' đã tồn tại.");
 
                 var logBook = new Book
                 {
@@ -260,10 +260,10 @@ namespace BookShopAPI.Services.Admin.BookService.Implements
         {
             var book = await _repo.GetByIdAsync(id);
             if (book == null)
-                throw new KeyNotFoundException($"Book with id '{id}' not found.");
+                throw new KeyNotFoundException($"Không tìm thấy sách có id '{id}'.");
 
             if (book.IsDeleted)
-                throw new InvalidOperationException($"Book with id '{id}' is already deleted.");
+                throw new InvalidOperationException($"Sách có id '{id}' đã bị xóa.");
 
             _repo.Delete(book);
             var result = await _repo.SaveChangesAsync();

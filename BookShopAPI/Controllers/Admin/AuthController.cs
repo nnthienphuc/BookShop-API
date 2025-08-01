@@ -20,14 +20,14 @@ namespace BookShopAPI.Controllers.Admin
         public async Task<IActionResult> Register([FromBody] RegisterDTO registerDTO)
         {
             await _authService.RegisterAsync(registerDTO);
-            return Ok(new { message = "Registration successful. Please check your email to activate your account." });
+            return Ok(new { message = "Đăng ký thành công. Vui lòng kiểm tra email để kích hoạt tài khoản." });
         }
 
         [HttpGet("activate")]
         public async Task<IActionResult> ActivateAccount([FromQuery] string token)
         {
             await _authService.ActivateAccountAsync(token);
-            return Ok(new { message = "Account activated successfully." });
+            return Ok(new { message = "Tài khoản đã được kích hoạt thành công." });
         }
 
         [HttpPost("login")]
@@ -43,7 +43,7 @@ namespace BookShopAPI.Controllers.Admin
             try
             {
                 await _authService.ResetPasswordAsync(resetPasswordDTO);
-                return Ok(new { message = "Password reset email sent successfully." });
+                return Ok(new { message = "Email đặt lại mật khẩu đã được gửi thành công." });
             }
             catch (UnauthorizedAccessException ex)
             {
@@ -61,9 +61,9 @@ namespace BookShopAPI.Controllers.Admin
             var success = await _authService.ResetPasswordFromTokenAsync(token);
 
             if (!success)
-                return BadRequest(new { message = "Token is invalid or expired." });
+                return BadRequest(new { message = "Mã token không hợp lệ hoặc đã hết hạn." });
 
-            return Ok(new { message = "Password reset successful. Your new password is: '123456'" });
+            return Ok(new { message = "Đặt lại mật khẩu thành công. Mật khẩu mới của bạn là: '123456'." });
         }
 
         [HttpPut("change-password")]
@@ -72,11 +72,11 @@ namespace BookShopAPI.Controllers.Admin
         {
             var staffIdClaim = User.FindFirst("staffId");
             if (staffIdClaim == null)
-                throw new UnauthorizedAccessException("Invalid token.");
+                throw new UnauthorizedAccessException("Token không hợp lệ.");
 
             var staffId = Guid.Parse(staffIdClaim.Value);
             await _authService.ChangePasswordAsync(staffId, changePasswordDTO);
-            return Ok(new { message = "Password changed successfully." });
+            return Ok(new { message = "Đã thay đổi mật khẩu thành công." });
         }
     }
 }
